@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Análisis de Viabilidad ALYOCA</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /*
+        Paleta Solicitada:
+        #262a36 (Gris muy oscuro / Texto y Fondo)
+        #e6e6e6 (Gris claro / No usado directamente en el texto principal por el contraste)
+        #f2f2f2 (Gris claro / Fondo del documento)
+        #f8cb1d (Amarillo oscuro / Acento)
+        #ffcc08 (Amarillo brillante / Acento más fuerte)
+        #ffffff (Blanco puro / Texto de encabezados)
+
+        Ajuste:
+        - Fondo de Body: #1B263B (Azul oscuro suave)
+        - Eliminación de Rojo: Reemplazado por #f8cb1d (Amarillo oscuro) sobre gris.
+        - Tarjeta de Conclusión: Fondo #262a36, Título #ffcc08, Contenido #ffffff.
+        - Tarjetas de Riesgo (MIA y Cumplimiento): Ambas oscuras para un formato consistente.
+        */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1B263B; /* Azul oscuro suave (Reemplaza el #262a36 del fondo) */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+        .main-bg {
+            background-color: #f2f2f2; /* Gris claro / Fondo del documento */
+        }
+        .main-text {
+            color: #262a36; /* Texto oscuro sobre fondo claro (usa el color base oscuro para contraste) */
+        }
+        .header-text {
+            color: #ffffff; /* Blanco puro / Texto de encabezados (usado en tarjetas) */
+        }
+        .card-shadow {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Color Pallete for Elements */
+        .color-accent-dark { background-color: #f8cb1d; } /* Amarillo oscuro */
+        .color-accent-bright { background-color: #ffcc08; } /* Amarillo brillante */
+        /* Tailwind utilities for custom colors */
+        .border-critical-warn { border-color: #f8cb1d; }
+        .text-critical-warn { color: #f8cb1d; }
+        
+        /* Estilos específicos para las tarjetas oscuras (Conclusión, Riesgo Crítico y Observación) */
+        .dark-card-bg { background-color: #262a36; } /* Fondo oscuro */
+        .dark-card-title-text { color: #ffcc08; } /* Título amarillo brillante */
+        .dark-card-content-text { color: #ffffff; } /* Contenido blanco */
+        .dark-card-border { border-color: #ffcc08; } /* Borde amarillo brillante (para Conclusión) */
+        .border-critical-dark-warn { border-color: #f8cb1d; } /* Borde amarillo oscuro (para Riesgos) */
+    </style>
+</head>
+<body>
+
+    <div class="w-full max-w-5xl main-bg rounded-xl p-8 lg:p-12 card-shadow">
+        <!-- Título Principal -->
+        <header class="text-center mb-10">
+            <!-- Título Principal (solo Ficha Técnica, más grande) -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold main-text leading-tight">
+                FICHA TÉCNICA
+            </h1>
+            <!-- Título del Proyecto (ALYOCA & PROYECTO QUARTIER) -->
+            <h2 class="text-2xl sm:text-3xl font-bold main-text opacity-90 mt-1">
+                ALYOCA & PROYECTO QUARTIER
+            </h2>
+            <!-- Subtítulo de contexto (anteriormente h2) -->
+            <p class="text-lg font-semibold main-text opacity-75 mt-2">
+                DICTAMEN DE VIABILIDAD COMERCIAL
+            </p>
+            <p class="text-sm main-text opacity-50 mt-4">
+                Resumen Ejecutivo - 3 de diciembre de 2025
+            </p>
+        </header>
+
+        <!-- Conclusión General - FONDO OSCURO -->
+        <div class="mb-10 p-6 dark-card-bg border-l-4 dark-card-border rounded-lg card-shadow">
+            <p class="text-xl font-bold mb-2 dark-card-title-text">Conclusión del Dictamen</p>
+            <p class="dark-card-content-text opacity-85">
+                La sociedad existe, el actual administrador cuenta con facultades para obligar a la sociedad. Se considera viable una alianza comercial para la comercialización del proyecto, siempre que se mitiguen las áreas de riesgo.
+            </p>
+        </div>
+
+        <!-- Sección de Hallazgos Positivos (Fuerzas) -->
+        <h3 class="text-2xl font-bold main-text mb-6 border-b-2 border-critical-warn pb-2 flex items-center">
+            <!-- Icono de Check-Circle para "Factores Positivos Clave" -->
+            <svg class="w-6 h-6 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Factores Positivos Clave
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+            <!-- Tarjeta 1: Titularidad -->
+            <div class="color-accent-bright p-6 rounded-xl header-text card-shadow flex flex-col justify-between">
+                <div class="text-4xl mb-4">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                </div>
+                <p class="font-bold text-xl mb-2">Titularidad Legal Clara</p>
+                <p class="text-sm opacity-90">Inmueble adquirido en 1998, libre de gravamen. Cadena de titularidad verificada y sin interrupciones.</p>
+            </div>
+
+            <!-- Tarjeta 2: Avance de Obra -->
+            <div class="color-accent-bright p-6 rounded-xl header-text card-shadow flex flex-col justify-between">
+                <div class="text-4xl mb-4">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                </div>
+                <p class="font-bold text-xl mb-2">Avance de Construcción</p>
+                <p class="text-sm opacity-90">Avance de obra ejecutado del 33.63%. Avance estructural significativo del 86.93%.</p>
+            </div>
+
+            <!-- Tarjeta 3: Gobernanza -->
+            <div class="color-accent-bright p-6 rounded-xl header-text card-shadow flex flex-col justify-between">
+                <div class="text-4xl mb-4">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </div>
+                <p class="font-bold text-xl mb-2">Estructura Corporativa</p>
+                <p class="text-sm opacity-90">Gobernanza clara. Transición de administración y representación legal debidamente actualizadas.</p>
+            </div>
+        </div>
+
+        <!-- Sección de Riesgos (Atención) -->
+        <h3 class="text-2xl font-bold main-text mb-6 border-b-2 border-critical-warn pb-2 flex items-center">
+            <!-- Icono de Alert Triangle para "Puntos de Riesgo y Atención" -->
+            <svg class="w-6 h-6 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+            Puntos de Riesgo y Atención
+        </h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- Tarjeta 4: Impacto Ambiental (Riesgo Crítico) - FONDO OSCURO -->
+            <div class="p-6 dark-card-bg border-l-4 border-critical-dark-warn rounded-lg card-shadow">
+                <div class="flex items-center mb-3">
+                    <span class="text-critical-warn text-3xl mr-3 font-extrabold">!</span>
+                    <p class="text-xl font-bold dark-card-title-text">Manif. de Impacto Ambiental (MIA)</p>
+                </div>
+                <p class="dark-card-content-text opacity-85">
+                    No existe manifestación (ni exención) sobre la MIA. Esta situación expone el proceso de edificación a riesgos conocidos.
+                </p>
+            </div>
+
+            <!-- Tarjeta 5: Normativa Municipal (Observación) - CAMBIADA A FONDO OSCURO -->
+            <div class="p-6 dark-card-bg border-l-4 border-critical-dark-warn rounded-lg card-shadow">
+                <div class="flex items-center mb-3">
+                    <span class="text-critical-warn text-2xl mr-3 font-extrabold">?</span>
+                    <p class="text-xl font-bold dark-card-title-text">Cumplimiento Normativo</p>
+                </div>
+                <p class="dark-card-content-text opacity-85">
+                    No se advierten incumplimientos a la normativa municipal. Se recomienda una revisión detallada de la exención de MIA.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Pie de página / Fuente -->
+        <footer class="mt-12 pt-6 border-t border-gray-300 text-center">
+            
+            <div class="flex flex-wrap justify-center items-center space-x-4">
+                <div class="main-text opacity-85 font-semibold flex items-center">
+                    <span class="text-yellow-500 text-2xl mr-2">
+                        <!-- Ícono de balanza -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2m4 0h2m-4 6h2m-4 3h2M10 4v2m4-2v2m-4 6v2m-4-6h2m4-2h2m-4 6h2m-4 3h2"></path></svg>
+                    </span>
+                    Base Legal/Administrativa Sólida
+                </div>
+                <div class="main-text opacity-85 font-semibold flex items-center">
+                    <span class="text-yellow-500 text-2xl mr-2">
+                         <!-- Ícono de construcción/avance -->
+                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2m-6 6h6"></path></svg>
+                    </span>
+                    Avance Físico Consistente
+                </div>
+            </div>
+            
+             <!-- NOTA IMPORTANTE -->
+            <p class="text-sm main-text opacity-85 font-bold mb-2 mt-6 flex items-center justify-center">
+                <!-- Icono de Megaphone para "Nota Importante" -->
+                <svg class="w-4 h-4 mr-2 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882v10.236a2 2 0 002 2h3a2 2 0 002-2V7.882a2 2 0 00-2-2h-3a2 2 0 00-2 2zM4 12h.01M4 8h.01M4 16h.01M20 12h.01"></path></svg>
+                Nota Importante:
+            </p>
+            <p class="text-xs main-text opacity-60 mb-4">
+                Esta infografía es un resumen ejecutivo. Para una comprensión completa y la toma de decisiones, debe consultarse el texto íntegro del Dictamen de Viabilidad Comercial.
+            </p>
+            <!-- FIN NOTA -->
+
+            <!-- ESPACIO PARA LOGO Y ATRIBUCIÓN -->
+            <div class="mt-4 flex flex-col items-center justify-center">
+                <!-- 
+                    *** INSTRUCCIÓN PARA EL USUARIO ***
+                    REEMPLAZA 'RUTA_DEL_LOGO_DOXUS' CON LA URL DIRECTA DE TU LOGO EN GITHUB.
+                -->
+                <img src="RUTA_DEL_LOGO_DOXUS" 
+                     alt="Logo de DOXUS" 
+                     class="h-8 mb-1"
+                     onerror="this.onerror=null; this.src='https://placehold.co/120x30/262a36/ffcc08?text=DOXUS';">
+                <!-- Texto de atribución, manteniendo el nombre del elaborador -->
+                <p class="text-xs main-text opacity-50">Elaborado por Maximilliano Arechiga Morales</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
